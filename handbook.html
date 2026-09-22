@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cytory | Player Handbook & Starter Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-pink: #ff00ff;
+            --neon-amber: #fde68a;
+            --dark-bg: #050505;
+            --card-bg: rgba(20, 20, 25, 0.85);
+            --grid-color: rgba(0, 243, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e5e7eb;
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                              linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+            background: rgba(5, 5, 5, 0.95);
+        }
+
+        .nav-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .nav-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-pink);
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 2px solid var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin: 0;
+            color: var(--neon-blue);
+            text-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            letter-spacing: 2px;
+            color: var(--neon-pink);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .step-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-left: 4px solid var(--neon-blue);
+            padding: 30px;
+            margin-bottom: 35px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .step-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            color: var(--neon-pink);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-blue);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        li strong {
+            color: var(--neon-amber);
+        }
+
+        .highlight-box {
+            background: rgba(255, 0, 255, 0.05);
+            border: 1px solid rgba(255, 0, 255, 0.3);
+            border-left: 4px solid var(--neon-pink);
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 6px;
+        }
+
+        .highlight-box h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-pink);
+            margin-top: 0;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            background: transparent;
+            border-radius: 4px;
+        }
+
+        .cta-button:hover {
+            background: var(--neon-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 30px var(--neon-blue);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #555;
+            border-top: 1px solid #222;
+        }
+
+        a {
+            color: var(--neon-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">CYTORY</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="handbook.html" style="color: var(--neon-blue); font-weight: bold;">Player Handbook</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="https://discord.gg/2rZF5uuzc" target="_blank">Discord</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>PLAYER HANDBOOK</h1>
+        <p class="subtitle">STARTER MANUAL & CORE OPERATIONAL PROTOCOLS</p>
+    </header>
+
+    <div class="container">
+
+        <!-- STEP 1 -->
+        <div class="step-card">
+            <div class="step-number">PHASE 01</div>
+            <h2>Initialize Your Crew (Character Creation)</h2>
+            <ul>
+                <li><strong>Navigate to Characters:</strong> Open the <strong>CHARACTERS</strong> tab from the bottom navigation bar and tap <strong>+ NEW CHARACTER</strong>.</li>
+                <li><strong>Select Origin & Archetype:</strong> Choose an origin (<em>Human</em>, <em>Synthetic</em>, <em>Cyborg</em>) to establish your base attributes, then select an archetype (<em>Vanguard</em>, <em>Cipher</em>, <em>Techie</em>, <em>Enforcer</em>, <em>Pathfinder</em>, <em>MadTech</em>, or <em>Siren</em>).</li>
+                <li><strong>Allocate Core Attributes:</strong> Distribute stat points into <strong>POWER</strong> (Strength & Melee), <strong>REFLEX</strong> (Agility & Evasion), <strong>INTEGRITY</strong> (Hit Points & Armor), and <strong>NEURAL</strong> (Hacking & Technical Proficiency).</li>
+                <li><strong>Portrait & Identity:</strong> Customize your unit's name, gender, and appearance using preset renders or custom neural generation.</li>
+            </ul>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step-card">
+            <div class="step-number">PHASE 02</div>
+            <h2>Mission Deployment (Launching a Campaign)</h2>
+            <ul>
+                <li><strong>Navigate to Story:</strong> Tap the <strong>STORY</strong> tab and select <strong>+ NEW CAMPAIGN</strong>.</li>
+                <li><strong>Set Sector & Objective:</strong> Give your campaign a operational code name and choose a deployment sector (e.g., <em>Cyber-Slums</em>, <em>Neon Heights</em>, <em>Corporate Core</em>).</li>
+                <li><strong>Assign Squad Leader:</strong> Choose your created character as squad lead.</li>
+                <li><strong>Contract Briefing:</strong> Accept an active contract from the Mission Board or let the AI Game Master generate a narrative starting prompt.</li>
+            </ul>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step-card">
+            <div class="step-number">PHASE 03</div>
+            <h2>The Neural Terminal & Tactical Combat</h2>
+            <ul>
+                <li><strong>Transmit Intent:</strong> Interact with the AI Game Master by typing custom text into the command line or using Quick Actions. Describe <em>what your character attempts to do</em>.</li>
+                <li><strong>D20 Skill & Combat Checks:</strong> When an action carries risk or conflict, the AI GM requests a D20 dice check. Roll the digital dice directly on screen or enter physical tabletop dice results manually.</li>
+                <li><strong>Fleshsmith Marketplace:</strong> Earn credits by completing contracts. Visit the Fleshsmith market to purchase weapons, cybernetic augmentations, and neural implants to boost your stats.</li>
+                <li><strong>Local Saves & Google Drive Sync:</strong> Your campaigns auto-save locally to your device for offline play. Go to <strong>OPTIONS</strong> anytime to create Google Drive cloud backups or export story logs as Google Docs.</li>
+            </ul>
+        </div>
+
+        <!-- IMPORTANT RULES -->
+        <div class="highlight-box">
+            <h3>⚡ CORE OPERATIONAL RULES TO REMEMBER</h3>
+            <ul>
+                <li><strong>Narrative Authority:</strong> The AI Game Master is the arbiter of reality. State what your unit <em>attempts</em> to do—the GM determines the success, consequences, and environmental reactions.</li>
+                <li><strong>Neural Pulses:</strong> Transmitting an action message uses 1 Neural Pulse. Pulses recharge through daily rewards, contract completion, or the Pulse Store.</li>
+                <li><strong>Local Sovereignty:</strong> You own your data. Character sheets and session logs reside on your local storage unless manually uploaded to cloud backup slots.</li>
+            </ul>
+        </div>
+
+        <div class="cta-container">
+            <a href="https://discord.gg/2rZF5uuzc" class="cta-button" target="_blank">Join Our Discord Community</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 CYTORY NEURAL SYSTEMS. ALL RIGHTS RESERVED. // <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+</body>
+</html>
