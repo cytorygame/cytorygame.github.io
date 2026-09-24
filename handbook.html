@@ -145,6 +145,40 @@
             letter-spacing: 1px;
         }
 
+        .roadmap-box {
+            background: rgba(0, 243, 255, 0.05);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-left: 4px solid var(--neon-blue);
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 6px;
+        }
+
+        .roadmap-box h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-blue);
+            margin-top: 0;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 6px;
+        }
+
+        .warning-box h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ef4444;
+            margin-top: 0;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
         .cta-container {
             text-align: center;
             margin: 60px 0;
@@ -220,7 +254,7 @@
             <h2>Mission Deployment (Launching a Campaign)</h2>
             <ul>
                 <li><strong>Navigate to Story:</strong> Tap the <strong>STORY</strong> tab and select <strong>+ NEW CAMPAIGN</strong>.</li>
-                <li><strong>Set Sector & Objective:</strong> Give your campaign a operational code name and choose a deployment sector (e.g., <em>Cyber-Slums</em>, <em>Neon Heights</em>, <em>Corporate Core</em>).</li>
+                <li><strong>Set Sector & Objective:</strong> Give your campaign an operational code name and choose a deployment sector (e.g., <em>Cyber-Slums</em>, <em>Neon Heights</em>, <em>Corporate Core</em>).</li>
                 <li><strong>Assign Squad Leader:</strong> Choose your created character as squad lead.</li>
                 <li><strong>Contract Briefing:</strong> Accept an active contract from the Mission Board or let the AI Game Master generate a narrative starting prompt.</li>
             </ul>
@@ -233,8 +267,128 @@
             <ul>
                 <li><strong>Transmit Intent:</strong> Interact with the AI Game Master by typing custom text into the command line or using Quick Actions. Describe <em>what your character attempts to do</em>.</li>
                 <li><strong>D20 Skill & Combat Checks:</strong> When an action carries risk or conflict, the AI GM requests a D20 dice check. Roll the digital dice directly on screen or enter physical tabletop dice results manually.</li>
-                <li><strong>Fleshsmith Marketplace:</strong> Earn credits by completing contracts. Visit the Fleshsmith market to purchase weapons, cybernetic augmentations, and neural implants to boost your stats.</li>
-                <li><strong>Local Saves & Google Drive Sync:</strong> Your campaigns auto-save locally to your device for offline play. Go to <strong>OPTIONS</strong> anytime to create Google Drive cloud backups or export story logs as Google Docs.</li>
+                <li><strong>Tactical Rerolls:</strong> Spend 10 Neural Pulses to trigger a Tactical Reroll on critical checks or failed rolls.</li>
+                <li><strong>Dynamic AI Narration:</strong> The AI GM tracks your active weapon, armor, and cyberware on every turn, weaving your specific loadout into combat descriptions and enemy responses.</li>
+            </ul>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step-card">
+            <div class="step-number">PHASE 04</div>
+            <h2>The Fleshsmith & Inventory Management</h2>
+            <ul>
+                <li><strong>Interactive Item Inspection:</strong> Tap any item in your <strong>INVENTORY</strong> or the <strong>FLESHSMITH MARKETPLACE</strong> to open its Item Detail card. This displays full <strong>Lore Data</strong>, <strong>Functional Specs</strong>, <strong>Damage/AC Stats</strong>, and <strong>Item Properties</strong> before equipping or purchasing.</li>
+                <li><strong>Fleshsmith Marketplace:</strong> Earn Credits (CR) by completing contracts and missions. Visit the Fleshsmith in the <strong>MARKET</strong> tab to acquire new weapons, ballistic armor, and cybernetic implants.</li>
+                <li><strong>Equipping Gear:</strong> Open the <strong>INVENTORY</strong> screen to view active loadout slots:
+                    <ul>
+                        <li><strong>WEAPON Slot:</strong> Sets active damage dice (e.g., 1d8 slashing, 2d8 heavy) and attack bonuses.</li>
+                        <li><strong>ARMOR Slot:</strong> Instantly increases your Armor Class (AC), reducing incoming damage and enemy hit chance.</li>
+                        <li><strong>EQUIPMENT CHASSIS & UTILITY BELT:</strong> Carry up to 3 active equipment pieces and 4 combat items (stim-packs, med-kits).</li>
+                        <li><strong>TRANSPORT BAY:</strong> Store active cyber-vehicles for mobility and rapid deployment.</li>
+                    </ul>
+                </li>
+                <li><strong>System Strain & Cyberware:</strong> Installing cybernetic implants requires System Strain. Increase your <strong>INTEGRITY</strong> attribute to expand your Max Strain capacity and prevent cyberpsychosis.</li>
+            </ul>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="step-card">
+            <div class="step-number">PHASE 05</div>
+            <h2>Neural Tuning & Interactive Character Sheets</h2>
+            <ul>
+                <li><strong>Interactive Stat Tooltips:</strong> On your <strong>CHARACTER SHEET</strong> or <strong>PLAYER CARD</strong>, tap any core attribute (<em>Power</em>, <em>Reflex</em>, <em>Integrity</em>, <em>Neural</em>) or skill to display instant explanatory tooltips detailing how that stat influences combat, evasion, and skill checks.</li>
+                <li><strong>Earning Upgrade Points (PTS):</strong> Advance your character by earning PTS from successful missions and narrative achievements.</li>
+                <li><strong>Neural Tuning Facility:</strong> Open character details and tap <strong>NEURAL TUNING</strong> to spend PTS:
+                    <ul>
+                        <li><strong>Attribute Upgrades:</strong> Permanently raise POWER, REFLEX, INTEGRITY, or NEURAL scores to boost dice roll modifiers and Max HP.</li>
+                        <li><strong>Ability Subroutines:</strong> Upgrade class-specific active abilities and reduce cooldown timers.</li>
+                    </ul>
+                </li>
+                <li><strong>Stat Modifiers in Combat:</strong> Higher attributes increase your roll modifiers (e.g., a Reflex score of 14 grants a +2 modifier to attack rolls and evasion checks).</li>
+            </ul>
+        </div>
+
+        <!-- STEP 6: BUTTON BY BUTTON DIRECTORY -->
+        <div class="step-card">
+            <div class="step-number">PHASE 06</div>
+            <h2>UI HUD & Menu Directory (Button-By-Button Guide)</h2>
+            <ul>
+                <li><strong>MAIN SCREEN BUTTONS & TABS:</strong>
+                    <ul>
+                        <li><strong>STORY Tab:</strong> View active campaigns, start a new story, relocate sectors, or archive completed missions.</li>
+                        <li><strong>CHARACTERS Tab:</strong> Access the Character Lab to create new units, edit identities, or manage character sheets.</li>
+                        <li><strong>MARKET Tab:</strong> Open the Fleshsmith Marketplace to buy weapons, armor, cyberware, and transport vehicles.</li>
+                        <li><strong>₱ULSES Tab:</strong> Collect daily pulse rewards, watch optional rewarded transmissions, or purchase pulse recharges.</li>
+                        <li><strong>TOP 3-DOT MENU (⋮):</strong> Access <strong>SETTINGS / OPTIONS</strong>, <strong>CLOUD BACKUPS</strong>, <strong>SYSTEM MANUAL</strong>, <strong>TRANSMIT FEEDBACK</strong>, and <strong>ABOUT / DISCORD</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>IN-STORY HUD & TERMINAL BUTTONS:</strong>
+                    <ul>
+                        <li><strong>CHARACTER PORTRAIT / CARD:</strong> Tap your squad leader's top-left portrait to inspect live HP, Energy, System Strain, AC, and attribute stats.</li>
+                        <li><strong>INVENTORY Button:</strong> Opens the live loadout overlay to equip weapons, equip armor, or use combat stims during a story session.</li>
+                        <li><strong>QUICK ACTIONS:</strong> Tap pre-generated contextual action buttons (e.g., <em>Look Around</em>, <em>Assess Threat</em>, <em>Hack Terminal</em>, <em>Rest</em>) for fast 1-tap responses.</li>
+                        <li><strong>ABILITIES Bar:</strong> Trigger class-specific active subroutines (<em>Titan Slam</em>, <em>Tactical Scan</em>, <em>Blade Vortex</em>, <em>Shield Overload</em>).</li>
+                        <li><strong>COMBAT HUD:</strong> Displays active initiative turn order, enemy HP status, and combat log during tactical encounters.</li>
+                        <li><strong>PAUSE / MENU:</strong> Return to the Main Menu or open settings while preserving current campaign state.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- STEP 7 -->
+        <div class="step-card">
+            <div class="step-number">PHASE 07</div>
+            <h2>Rest & Recovery Protocol</h2>
+            <ul>
+                <li><strong>Resting:</strong> Take a Short or Long Rest in the terminal to restore Hit Points (HP) and Energy.</li>
+                <li><strong>Sector Ambush Risk:</strong> Resting in hostile or unsecure sectors carries a risk of enemy ambushes! Clear immediate threats or secure a safehouse before initiating a rest sequence.</li>
+            </ul>
+        </div>
+
+        <!-- STEP 8 -->
+        <div class="step-card">
+            <div class="step-number">PHASE 08</div>
+            <h2>Daily Directives & Pulse Management</h2>
+            <ul>
+                <li><strong>Daily Directives:</strong> Check the Mission Board daily to complete objectives and earn free Credits & Neural Pulses.</li>
+                <li><strong>Pulse Recharges:</strong> Transmitting an action message costs 1 Neural Pulse. Earn additional pulses through daily rewards, watching optional rewarded transmissions, or purchasing pulse packs in the Store.</li>
+            </ul>
+        </div>
+
+        <!-- STEP 9 -->
+        <div class="step-card">
+            <div class="step-number">PHASE 09</div>
+            <h2>Saves, Cloud Backup & Story Export</h2>
+            <ul>
+                <li><strong>Local Sovereignty:</strong> All session logs and character templates save automatically to your device's local storage for fast, offline-capable play.</li>
+                <li><strong>Cold Storage Archiving:</strong> Archive inactive campaigns to Cold Storage to keep your active story list clean without losing progress.</li>
+                <li><strong>Google Drive Cloud Sync:</strong> Go to the <strong>OPTIONS</strong> screen anytime to back up campaign snapshots to 1 of 5 Google Drive slots or restore save files across devices.</li>
+                <li><strong>Google Docs Story Archive:</strong> Compile full campaign narration, choices, and combat logs directly into an editable Google Doc in your Google Drive.</li>
+            </ul>
+        </div>
+
+        <!-- UPCOMING FEATURES / ROADMAP -->
+        <div class="roadmap-box">
+            <h3>🔮 FUTURE TRANSMISSIONS: UPCOMING FEATURES & ROADMAP</h3>
+            <ul>
+                <li><strong>Daily Operations [OPS]:</strong> Faction standing contracts, daily login streaks, and high-value bounty targets in the Sprawl.</li>
+                <li><strong>Custom AI Neural Image Generation:</strong> Create fully custom, prompt-based AI neural renders directly within the Character Lab.</li>
+                <li><strong>Expanded Squad Tactics:</strong> Multi-unit combat encounters, squad combo attacks, and vehicle-based road warfare.</li>
+            </ul>
+        </div>
+
+        <!-- TROUBLESHOOTING / NEURAL DESYNC -->
+        <div class="warning-box">
+            <h3>⚠️ KNOWN ISSUES & TROUBLESHOOTING: NEURAL DESYNC & OVERLOAD</h3>
+            <ul>
+                <li><strong>Network & AI Model Saturation:</strong> Cytory relies on real-time neural LLM generation. During periods of high global traffic or temporary internet connection drops, you may encounter a <strong>NEURAL_DESYNC</strong> or <strong>NEURAL_OVERLOAD</strong> alert.</li>
+                <li><strong>What to Do During a Desync:</strong>
+                    <ul>
+                        <li>If a roll check or action fails to respond, tap <strong>RETRY</strong> on the alert pop-up.</li>
+                        <li>Wait 5–10 seconds for the neural link to stabilize before resending your command.</li>
+                        <li>Your character stats, items, and campaign progress are protected locally and will not be lost during a connection interruption.</li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
@@ -242,8 +396,8 @@
         <div class="highlight-box">
             <h3>⚡ CORE OPERATIONAL RULES TO REMEMBER</h3>
             <ul>
-                <li><strong>Narrative Authority:</strong> The AI Game Master is the arbiter of reality. State what your unit <em>attempts</em> to do—the GM determines the success, consequences, and environmental reactions.</li>
-                <li><strong>Neural Pulses:</strong> Transmitting an action message uses 1 Neural Pulse. Pulses recharge through daily rewards, contract completion, or the Pulse Store.</li>
+                <li><strong>Narrative Authority:</strong> The AI Game Master is the arbiter of reality. State what your unit <em>attempts</em> to do—the GM determines success, consequences, and environmental reactions based on your stats and gear.</li>
+                <li><strong>Tabletop Physical Dice Support:</strong> When a d20 roll is required, you can use the animated digital die or roll physical tabletop dice and input your physical roll result.</li>
                 <li><strong>Local Sovereignty:</strong> You own your data. Character sheets and session logs reside on your local storage unless manually uploaded to cloud backup slots.</li>
             </ul>
         </div>
