@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cytory | Player Handbook & Starter Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Cytory | Official Player Handbook & Cyberpunk Rulebook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --neon-blue: #00f3ff;
@@ -82,7 +82,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -115,6 +115,15 @@
             text-transform: uppercase;
         }
 
+        h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-amber);
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
         ul {
             padding-left: 20px;
             line-height: 1.8;
@@ -138,11 +147,8 @@
         }
 
         .highlight-box h3 {
-            font-family: 'Orbitron', sans-serif;
             color: var(--neon-pink);
             margin-top: 0;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
         }
 
         .roadmap-box {
@@ -155,11 +161,8 @@
         }
 
         .roadmap-box h3 {
-            font-family: 'Orbitron', sans-serif;
             color: var(--neon-blue);
             margin-top: 0;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
         }
 
         .warning-box {
@@ -172,10 +175,29 @@
         }
 
         .warning-box h3 {
-            font-family: 'Orbitron', sans-serif;
             color: #ef4444;
             margin-top: 0;
-            font-size: 1.2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        th, td {
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            padding: 12px;
+            text-align: left;
+            font-size: 0.85rem;
+        }
+
+        th {
+            background: rgba(0, 243, 255, 0.1);
+            color: var(--neon-blue);
+            font-family: 'Orbitron', sans-serif;
             letter-spacing: 1px;
         }
 
@@ -231,98 +253,163 @@
 
     <header>
         <h1>PLAYER HANDBOOK</h1>
-        <p class="subtitle">STARTER MANUAL & CORE OPERATIONAL PROTOCOLS</p>
+        <p class="subtitle">COMPLETE STARTER MANUAL & CYBERPUNK RULEBOOK V1.22</p>
     </header>
 
     <div class="container">
 
-        <!-- STEP 1 -->
+        <!-- SECTION 1: ARCHETYPES & ORIGINS -->
         <div class="step-card">
-            <div class="step-number">PHASE 01</div>
-            <h2>Initialize Your Crew (Character Creation)</h2>
+            <div class="step-number">SECTION 01</div>
+            <h2>Origins & Archetypes (Class Specifications)</h2>
+            <p>Every unit initialized in Cytory begins with a baseline Origin and Class Archetype that dictates stat scaling, abilities, and combat hit dice:</p>
+
+            <h3>Base Origins</h3>
             <ul>
-                <li><strong>Navigate to Characters:</strong> Open the <strong>CHARACTERS</strong> tab from the bottom navigation bar and tap <strong>+ NEW CHARACTER</strong>.</li>
-                <li><strong>Select Origin & Archetype:</strong> Choose an origin (<em>Human</em>, <em>Synthetic</em>, <em>Cyborg</em>) to establish your base attributes, then select an archetype (<em>Vanguard</em>, <em>Cipher</em>, <em>Techie</em>, <em>Enforcer</em>, <em>Pathfinder</em>, <em>MadTech</em>, or <em>Siren</em>).</li>
-                <li><strong>Allocate Core Attributes:</strong> Distribute stat points into <strong>POWER</strong> (Strength & Melee), <strong>REFLEX</strong> (Agility & Evasion), <strong>INTEGRITY</strong> (Hit Points & Armor), and <strong>NEURAL</strong> (Hacking & Technical Proficiency).</li>
-                <li><strong>Portrait & Identity:</strong> Customize your unit's name, gender, and appearance using preset renders or custom neural generation.</li>
+                <li><strong>Human:</strong> Balanced biological entity with adaptable baseline attribute scaling.</li>
+                <li><strong>Augmented Human:</strong> Cybernetically modified baseline with elevated Reflexes and Integrity.</li>
+                <li><strong>Synthetic:</strong> Fully artificial android shell with high Neural and System Strain capacity.</li>
+                <li><strong>Cyborg:</strong> Heavy machine-flesh hybrid engineered for armor absorption and frontline combat.</li>
+                <li><strong>Netborn:</strong> Digital consciousness encased in a light chassis optimized for neural hacking.</li>
+            </ul>
+
+            <h3>Combat Archetypes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Archetype</th>
+                        <th>Hit Die</th>
+                        <th>Primary Stats</th>
+                        <th>Specialization & Core Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Vanguard</strong></td>
+                        <td>d10</td>
+                        <td>Power / Integrity</td>
+                        <td>Frontline brawler & tactical tank. Uses <em>Titan Slam</em>, <em>Blade Vortex</em>, and <em>Shield Overload</em>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cipher</strong></td>
+                        <td>d6</td>
+                        <td>Neural / Insight</td>
+                        <td>Reality hacker & ICE manipulator. Uses <em>Static Scream</em>, <em>Memory Hack</em>, and <em>Neural Override</em>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Techie</strong></td>
+                        <td>d8</td>
+                        <td>Neural / Reflex</td>
+                        <td>Device engineering & automated defense. Uses <em>System Override</em>, <em>Stitch Protocol</em>, and <em>Automated Grid</em>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Enforcer</strong></td>
+                        <td>d12</td>
+                        <td>Power / Reflex</td>
+                        <td>Heavy armor & ballistic devastation. Unarmored Defense equals 10 + Dex + Con.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pathfinder</strong></td>
+                        <td>d10</td>
+                        <td>Reflex / Insight</td>
+                        <td>Reconnaissance, stealth, and critical precision strikes in hazardous sectors.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>MadTech</strong></td>
+                        <td>d8</td>
+                        <td>Neural / Power</td>
+                        <td>Experimental technology, chaotic energy bursts, and hazardous field overloads.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Siren</strong></td>
+                        <td>d8</td>
+                        <td>Influence / Insight</td>
+                        <td>Corporate espionage, NPC interrogation, bribery, and psychological deception.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 2: ATTRIBUTES & D20 MATH -->
+        <div class="step-card">
+            <div class="step-number">SECTION 02</div>
+            <h2>Core Attributes & D20 Roll Math</h2>
+            <p>Every mechanical check in Cytory follows the classic D20 tabletop resolution formula:</p>
+
+            <p style="background: rgba(0,243,255,0.05); padding: 15px; border-left: 3px solid var(--neon-blue); font-family: 'Orbitron', sans-serif;">
+                FINAL TOTAL = d20 ROLL + ATTRIBUTE MODIFIER + PROFICIENCY BONUS + GEAR BONUSES
+            </p>
+
+            <h3>Core Attribute Breakdown</h3>
+            <ul>
+                <li><strong>POWER (POW):</strong> Physical strength, melee weapon damage, forcing heavy doors, athletic maneuvers.</li>
+                <li><strong>REFLEX (RFL):</strong> Agility, ranged precision, initiative order, and Armor Class ($\text{AC} = 10 + \lfloor\text{Reflex} / 2\rfloor + \text{Armor}$).</li>
+                <li><strong>INTEGRITY (INTG):</strong> Vitality & System Strain. Calculates $\text{Max HP} = 10 + \lfloor\text{Integrity} / 2\rfloor \times 5$ and $\text{Max Strain} = \lfloor(10 + \text{Integrity}) / 2\rfloor + 2$.</li>
+                <li><strong>NEURAL (NEUR):</strong> Cyberdeck speed, terminal hacking, decrypting data drives, executing digital subroutines.</li>
+                <li><strong>INSIGHT (INS):</strong> Perception, hazard detection, searching rooms for hidden loot, reading tactical ambushes.</li>
+                <li><strong>INFLUENCE (INF):</strong> Bribing, coercing, deceiving, and negotiating with corporate executives or fixers.</li>
+            </ul>
+
+            <h3>Modifier Formula</h3>
+            <p>Your modifier is calculated directly from your attribute score:</p>
+            <p style="color: var(--neon-amber); font-weight: bold;">Attribute Modifier = (Attribute Score - 10) / 2 [Rounded Down]</p>
+            <ul>
+                <li><strong>Natural 20 (Critical Success):</strong> Triggers maximum narrative outcome and doubles damage dice in combat!</li>
+                <li><strong>Natural 1 (Critical Failure):</strong> Triggers weapon jams, tactical setbacks, or environmental complications.</li>
+                <li><strong>Tabletop Physical Dice Mode:</strong> When the d20 roll modal appears, you can use the animated digital die or roll physical tabletop dice and type in your exact physical result.</li>
             </ul>
         </div>
 
-        <!-- STEP 2 -->
+        <!-- SECTION 3: FLESHSMITH & INVENTORY -->
         <div class="step-card">
-            <div class="step-number">PHASE 02</div>
-            <h2>Mission Deployment (Launching a Campaign)</h2>
-            <ul>
-                <li><strong>Navigate to Story:</strong> Tap the <strong>STORY</strong> tab and select <strong>+ NEW CAMPAIGN</strong>.</li>
-                <li><strong>Set Sector & Objective:</strong> Give your campaign an operational code name and choose a deployment sector (e.g., <em>Cyber-Slums</em>, <em>Neon Heights</em>, <em>Corporate Core</em>).</li>
-                <li><strong>Assign Squad Leader:</strong> Choose your created character as squad lead.</li>
-                <li><strong>Contract Briefing:</strong> Accept an active contract from the Mission Board or let the AI Game Master generate a narrative starting prompt.</li>
-            </ul>
-        </div>
-
-        <!-- STEP 3 -->
-        <div class="step-card">
-            <div class="step-number">PHASE 03</div>
-            <h2>The Neural Terminal & Tactical Combat</h2>
-            <ul>
-                <li><strong>Transmit Intent:</strong> Interact with the AI Game Master by typing custom text into the command line or using Quick Actions. Describe <em>what your character attempts to do</em>.</li>
-                <li><strong>D20 Skill & Combat Checks:</strong> When an action carries risk or conflict, the AI GM requests a D20 dice check. Roll the digital dice directly on screen or enter physical tabletop dice results manually.</li>
-                <li><strong>Tactical Rerolls:</strong> Spend 10 Neural Pulses to trigger a Tactical Reroll on critical checks or failed rolls.</li>
-                <li><strong>Dynamic AI Narration:</strong> The AI GM tracks your active weapon, armor, and cyberware on every turn, weaving your specific loadout into combat descriptions and enemy responses.</li>
-            </ul>
-        </div>
-
-        <!-- STEP 4 -->
-        <div class="step-card">
-            <div class="step-number">PHASE 04</div>
-            <h2>The Fleshsmith & Inventory Management</h2>
+            <div class="step-number">SECTION 03</div>
+            <h2>The Fleshsmith, Equipment & Vehicles</h2>
             <ul>
                 <li><strong>Interactive Item Inspection:</strong> Tap any item in your <strong>INVENTORY</strong> or the <strong>FLESHSMITH MARKETPLACE</strong> to open its Item Detail card. This displays full <strong>Lore Data</strong>, <strong>Functional Specs</strong>, <strong>Damage/AC Stats</strong>, and <strong>Item Properties</strong> before equipping or purchasing.</li>
-                <li><strong>Fleshsmith Marketplace:</strong> Earn Credits (CR) by completing contracts and missions. Visit the Fleshsmith in the <strong>MARKET</strong> tab to acquire new weapons, ballistic armor, and cybernetic implants.</li>
-                <li><strong>Equipping Gear:</strong> Open the <strong>INVENTORY</strong> screen to view active loadout slots:
+                <li><strong>Loadout Slots:</strong>
                     <ul>
-                        <li><strong>WEAPON Slot:</strong> Sets active damage dice (e.g., 1d8 slashing, 2d8 heavy) and attack bonuses.</li>
-                        <li><strong>ARMOR Slot:</strong> Instantly increases your Armor Class (AC), reducing incoming damage and enemy hit chance.</li>
-                        <li><strong>EQUIPMENT CHASSIS & UTILITY BELT:</strong> Carry up to 3 active equipment pieces and 4 combat items (stim-packs, med-kits).</li>
-                        <li><strong>TRANSPORT BAY:</strong> Store active cyber-vehicles for mobility and rapid deployment.</li>
+                        <li><strong>WEAPON Slot:</strong> Equipping weapons (*Mono-Blade*, *Plasma Pistol*, *Heavy Railgun*) updates active damage dice (1d8, 2d8) and attack bonuses.</li>
+                        <li><strong>ARMOR Slot:</strong> Equipping ballistic armor (*Ballistic Vest*, *Subdermal Plating*) directly boosts Armor Class (AC), reducing enemy hit chance.</li>
+                        <li><strong>EQUIPMENT CHASSIS & UTILITY BELT:</strong> Carry up to 3 equipment chassis pieces and 4 utility belt combat consumables (*Stim-Packs*, *Medkits*).</li>
+                        <li><strong>TRANSPORT BAY (Vehicles):</strong> Store active cyber-vehicles (*Cyber-Bike*, *AV-4 Transport*) for sector transit, fast travel, and road combat encounters.</li>
                     </ul>
                 </li>
-                <li><strong>System Strain & Cyberware:</strong> Installing cybernetic implants requires System Strain. Increase your <strong>INTEGRITY</strong> attribute to expand your Max Strain capacity and prevent cyberpsychosis.</li>
+                <li><strong>System Strain & Cyberpsychosis:</strong> Cybernetic implants require System Strain. Raising your <strong>INTEGRITY</strong> expands your strain limit to prevent overload.</li>
             </ul>
         </div>
 
-        <!-- STEP 5 -->
+        <!-- SECTION 4: PROGRESSION & NEURAL TUNING -->
         <div class="step-card">
-            <div class="step-number">PHASE 05</div>
+            <div class="step-number">SECTION 04</div>
             <h2>Neural Tuning & Interactive Character Sheets</h2>
             <ul>
                 <li><strong>Interactive Stat Tooltips:</strong> On your <strong>CHARACTER SHEET</strong> or <strong>PLAYER CARD</strong>, tap any core attribute (<em>Power</em>, <em>Reflex</em>, <em>Integrity</em>, <em>Neural</em>) or skill to display instant explanatory tooltips detailing how that stat influences combat, evasion, and skill checks.</li>
-                <li><strong>Earning Upgrade Points (PTS):</strong> Advance your character by earning PTS from successful missions and narrative achievements.</li>
-                <li><strong>Neural Tuning Facility:</strong> Open character details and tap <strong>NEURAL TUNING</strong> to spend PTS:
+                <li><strong>Earning Upgrade Points (PTS):</strong> Complete contracts and major story milestones to earn PTS.</li>
+                <li><strong>Neural Tuning Facility:</strong> Tap <strong>NEURAL TUNING</strong> on your character details screen to spend PTS:
                     <ul>
                         <li><strong>Attribute Upgrades:</strong> Permanently raise POWER, REFLEX, INTEGRITY, or NEURAL scores to boost dice roll modifiers and Max HP.</li>
-                        <li><strong>Ability Subroutines:</strong> Upgrade class-specific active abilities and reduce cooldown timers.</li>
+                        <li><strong>Ability Subroutines:</strong> Level up class-specific abilities to increase damage, range, and reduce cooldown timers.</li>
                     </ul>
                 </li>
-                <li><strong>Stat Modifiers in Combat:</strong> Higher attributes increase your roll modifiers (e.g., a Reflex score of 14 grants a +2 modifier to attack rolls and evasion checks).</li>
             </ul>
         </div>
 
-        <!-- STEP 6: BUTTON BY BUTTON DIRECTORY -->
+        <!-- SECTION 5: UI HUD & MENU DIRECTORY -->
         <div class="step-card">
-            <div class="step-number">PHASE 06</div>
+            <div class="step-number">SECTION 05</div>
             <h2>UI HUD & Menu Directory (Button-By-Button Guide)</h2>
             <ul>
-                <li><strong>MAIN SCREEN BUTTONS & TABS:</strong>
+                <li><strong>MAIN SCREEN NAVIGATION:</strong>
                     <ul>
-                        <li><strong>STORY Tab:</strong> View active campaigns, start a new story, relocate sectors, or archive completed missions.</li>
-                        <li><strong>CHARACTERS Tab:</strong> Access the Character Lab to create new units, edit identities, or manage character sheets.</li>
-                        <li><strong>MARKET Tab:</strong> Open the Fleshsmith Marketplace to buy weapons, armor, cyberware, and transport vehicles.</li>
+                        <li><strong>STORY Tab:</strong> View active campaigns, launch new operations, relocate sectors, or archive completed missions.</li>
+                        <li><strong>CHARACTERS Tab:</strong> Open Character Lab to build units, edit identities, or manage character sheets.</li>
+                        <li><strong>MARKET Tab:</strong> Open Fleshsmith Marketplace to buy weapons, armor, cyberware, and transport vehicles.</li>
                         <li><strong>₱ULSES Tab:</strong> Collect daily pulse rewards, watch optional rewarded transmissions, or purchase pulse recharges.</li>
+                        <li><strong>SITE Button:</strong> Launches the official Cytory website (`https://cytorygame.github.io/`) directly in your browser.</li>
                         <li><strong>TOP 3-DOT MENU (⋮):</strong> Access <strong>SETTINGS / OPTIONS</strong>, <strong>CLOUD BACKUPS</strong>, <strong>SYSTEM MANUAL</strong>, <strong>TRANSMIT FEEDBACK</strong>, and <strong>ABOUT / DISCORD</strong>.</li>
                     </ul>
                 </li>
-                <li><strong>IN-STORY HUD & TERMINAL BUTTONS:</strong>
+                <li><strong>IN-STORY TERMINAL BUTTONS:</strong>
                     <ul>
                         <li><strong>CHARACTER PORTRAIT / CARD:</strong> Tap your squad leader's top-left portrait to inspect live HP, Energy, System Strain, AC, and attribute stats.</li>
                         <li><strong>INVENTORY Button:</strong> Opens the live loadout overlay to equip weapons, equip armor, or use combat stims during a story session.</li>
@@ -335,30 +422,24 @@
             </ul>
         </div>
 
-        <!-- STEP 7 -->
+        <!-- SECTION 6: DAILY / WEEKLY DIRECTIVES MATRIX -->
         <div class="step-card">
-            <div class="step-number">PHASE 07</div>
-            <h2>Rest & Recovery Protocol</h2>
+            <div class="step-number">SECTION 06</div>
+            <h2>Daily, Weekly & Monthly Directives Matrix</h2>
+            <p>Access the <strong>OPS</strong> tab daily to complete operational directives and claim high-value gameplay rewards:</p>
             <ul>
-                <li><strong>Resting:</strong> Take a Short or Long Rest in the terminal to restore Hit Points (HP) and Energy.</li>
-                <li><strong>Sector Ambush Risk:</strong> Resting in hostile or unsecure sectors carries a risk of enemy ambushes! Clear immediate threats or secure a safehouse before initiating a rest sequence.</li>
+                <li><strong>Daily Task 1 (UPLINK_STABILIZE):</strong> Watch 3 Rewarded Transmissions (Ads) $\rightarrow$ <strong>1 Free Tactical Reroll</strong></li>
+                <li><strong>Daily Task 2 (TACTICAL_ENGAGEMENT):</strong> Perform 3 D20 Roll Checks in any campaign $\rightarrow$ <strong>1 Free Tactical Reroll</strong></li>
+                <li><strong>Daily Completion Bonus:</strong> Complete both Daily Tasks $\rightarrow$ <strong>+2 Free Pulses</strong></li>
+                <li><strong>Weekly Directive (SPRAWL_VETERAN):</strong> Complete 10 Daily Tasks this week $\rightarrow$ <strong>1 Free Weekly Nano-Revive</strong></li>
+                <li><strong>Monthly Directive (NEURAL_LEGEND):</strong> Complete 3 Weekly Directives this month $\rightarrow$ <strong>+20 Free Pulses</strong></li>
             </ul>
         </div>
 
-        <!-- STEP 8 -->
+        <!-- SECTION 7: SAVES & CLOUD SYNC -->
         <div class="step-card">
-            <div class="step-number">PHASE 08</div>
-            <h2>Daily Directives & Pulse Management</h2>
-            <ul>
-                <li><strong>Daily Directives:</strong> Check the Mission Board daily to complete objectives and earn free Credits & Neural Pulses.</li>
-                <li><strong>Pulse Recharges:</strong> Transmitting an action message costs 1 Neural Pulse. Earn additional pulses through daily rewards, watching optional rewarded transmissions, or purchasing pulse packs in the Store.</li>
-            </ul>
-        </div>
-
-        <!-- STEP 9 -->
-        <div class="step-card">
-            <div class="step-number">PHASE 09</div>
-            <h2>Saves, Cloud Backup & Story Export</h2>
+            <div class="step-number">SECTION 07</div>
+            <h2>Saves, Cold Storage & Google Docs Export</h2>
             <ul>
                 <li><strong>Local Sovereignty:</strong> All session logs and character templates save automatically to your device's local storage for fast, offline-capable play.</li>
                 <li><strong>Cold Storage Archiving:</strong> Archive inactive campaigns to Cold Storage to keep your active story list clean without losing progress.</li>
