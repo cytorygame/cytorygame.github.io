@@ -4,12 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="xv8ZPRj41dKnTTm37y8-75Tt4EJWlMKl-nA79vxSYWg" />
-    <title>Cytory | Cyberpunk RPG & AI Game Master</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <title>Cytory | Cyberpunk RPG & Autonomous AI Game Master</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <!-- Open Graph & Social Media Previews -->
+    <meta property="og:title" content="Cytory | Cyberpunk RPG & Autonomous AI Game Master">
+    <meta property="og:description" content="Dive into the neon-drenched Night-Sprawl. Experience next-generation interactive cyberpunk storytelling powered by an autonomous AI Game Master.">
+    <meta property="og:image" content="https://cytorygame.github.io/icon.png">
+    <meta property="og:url" content="https://cytorygame.github.io/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cytory | Cyberpunk RPG & AI Game Master">
+    <meta name="twitter:description" content="Interactive cyberpunk RPG powered by an autonomous AI Game Master. Local sovereignty, D20 rules, netrunning, and cloud backups.">
+    <meta name="twitter:image" content="https://cytorygame.github.io/icon.png">
+
+    <!-- Schema.org JSON-LD Structured Data for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Cytory: Cyberpunk RPG AI GM",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "GameApplication",
+      "gamePlatform": ["Android", "Google Play Games on PC"],
+      "author": {
+        "@type": "Organization",
+        "name": "Cytory LLC"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "6"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "url": "https://play.google.com/store/apps/details?id=com.cytory.cytorygame"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --neon-blue: #00f3ff;
             --neon-pink: #ff00ff;
+            --neon-amber: #fde68a;
             --dark-bg: #050505;
             --grid-color: rgba(0, 243, 255, 0.05);
         }
@@ -25,16 +70,64 @@
             background-size: 30px 30px;
         }
 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+            background: rgba(5, 5, 5, 0.95);
+        }
+
+        .nav-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+        }
+
+        .nav-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-pink);
+        }
+
         header {
-            min-height: 100vh;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             border-bottom: 2px solid var(--neon-blue);
             box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .app-icon-hero {
+            width: 96px;
+            height: 96px;
+            border-radius: 18px;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.5);
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -56,12 +149,12 @@
 
         .container {
             max-width: 900px;
-            margin: 80px auto;
+            margin: 60px auto;
             padding: 20px;
         }
 
         section {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             padding: 30px;
             border-left: 3px solid var(--neon-pink);
             background: rgba(255, 0, 255, 0.02);
@@ -82,8 +175,8 @@
 
         .cta-button {
             display: inline-block;
-            padding: 15px 40px;
-            margin-top: 40px;
+            padding: 14px 28px;
+            margin-top: 10px;
             border: 2px solid var(--neon-blue);
             color: var(--neon-blue);
             text-decoration: none;
@@ -93,6 +186,7 @@
             transition: 0.3s;
             background: transparent;
             border-radius: 4px;
+            font-size: 0.9rem;
         }
 
         .cta-button:hover {
@@ -101,12 +195,70 @@
             box-shadow: 0 0 30px var(--neon-blue);
         }
 
+        .cta-play {
+            background: var(--neon-blue) !important;
+            color: var(--dark-bg) !important;
+            font-weight: bold;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+        }
+
+        .cta-play:hover {
+            background: #ffffff !important;
+            color: #000000 !important;
+            box-shadow: 0 0 35px var(--neon-blue);
+        }
+
+        /* FAQ Accordion Styling */
+        details {
+            background: rgba(20, 20, 25, 0.8);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-left: 3px solid var(--neon-blue);
+            border-radius: 4px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+        }
+
+        summary {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-amber);
+            cursor: pointer;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            outline: none;
+            user-select: none;
+        }
+
+        summary:hover {
+            color: var(--neon-blue);
+        }
+
+        details[open] summary {
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+            padding-bottom: 10px;
+        }
+
+        details p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #e5e7eb;
+        }
+
         footer {
             text-align: center;
             padding: 40px;
             font-size: 0.8rem;
-            color: #555;
+            color: #777;
             border-top: 1px solid #222;
+        }
+
+        a {
+            color: var(--neon-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--neon-pink);
         }
 
         .glitch {
@@ -116,15 +268,32 @@
 </head>
 <body>
 
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="icon.png" alt="Cytory Icon"> CYTORY
+        </a>
+        <div class="nav-links">
+            <a href="index.html" style="color: var(--neon-blue); font-weight: bold;">Home</a>
+            <a href="handbook.html">Player Handbook</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="https://discord.gg/2rZF5uuzc" target="_blank">Discord</a>
+            <a href="https://www.facebook.com/groups/1589891669272849" target="_blank">Facebook</a>
+        </div>
+    </nav>
+
     <header>
+        <img src="icon.png" alt="Cytory App Icon" class="app-icon-hero">
         <h1 class="glitch" data-text="CYTORY">CYTORY</h1>
         <p class="subtitle">NEURAL LINK: STATUS_ACTIVE // CYBERPUNK RPG</p>
         <p style="max-width: 600px; margin-top: 15px; color: #9ca3af;">
             Dive into the neon-drenched Night-Sprawl. Experience next-generation interactive cyberpunk storytelling powered by an autonomous AI Game Master.
         </p>
-        <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+        <div style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+            <a href="https://play.google.com/store/apps/details?id=com.cytory.cytorygame" class="cta-button cta-play" target="_blank">▶ GET IT ON GOOGLE PLAY</a>
             <a href="handbook.html" class="cta-button" style="border-color: var(--neon-pink); color: var(--neon-pink);">Player Handbook</a>
-            <a href="https://discord.gg/2rZF5uuzc" class="cta-button" target="_blank">Join our Discord</a>
+            <a href="privacy.html" class="cta-button" style="border-color: #9ca3af; color: #e5e7eb;">Privacy Policy</a>
+            <a href="https://discord.gg/2rZF5uuzc" class="cta-button" target="_blank" style="border-color: #5865F2; color: #5865F2;">Discord</a>
+            <a href="https://www.facebook.com/groups/1589891669272849" class="cta-button" target="_blank" style="border-color: #1877F2; color: #1877F2;">Facebook Group</a>
         </div>
     </header>
 
@@ -149,15 +318,40 @@
             <p>Your stories belong to you. All campaign sessions and character sheets are stored locally on your device with complete offline support. Back up your snapshots directly to your personal Google Drive or export entire campaign histories into formatted Google Docs.</p>
         </section>
 
+        <!-- FAQ SECTION -->
+        <section style="border-left-color: var(--neon-blue); background: rgba(0, 243, 255, 0.02);">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+
+            <details open>
+                <summary>Is Cytory free to play?</summary>
+                <p>Yes! Cytory is completely free to download on Google Play. You can play campaigns using your daily free Neural Pulses, complete Operational Directives for free pulse rewards, or acquire optional Neural Pulses for extended story sessions.</p>
+            </details>
+
+            <details>
+                <summary>How does the AI Game Master work?</summary>
+                <p>Cytory utilizes advanced rules-aware LLMs trained on tabletop cyberpunk SRD mechanics. The GM calculates d20 skill checks, attribute modifiers, and equipment bonuses in real-time while generating adaptive narrative outcomes based on your actions.</p>
+            </details>
+
+            <details>
+                <summary>Are my character sheets and campaign saves private?</summary>
+                <p>Yes. Cytory enforces Local Data Sovereignty. All campaign logs, character sheets, and item inventories reside locally on your device or in your personal Google Drive (App Data folder). We do not store your narrative campaigns on our servers.</p>
+            </details>
+
+            <details>
+                <summary>Can I play Cytory on Google Play Games for PC?</summary>
+                <p>Yes! Cytory includes full x86_64 architecture support, mouse and physical keyboard navigation, and windowed/fullscreen scaling for desktop play on Google Play Games on PC.</p>
+            </details>
+        </section>
+
         <section>
             <h2>Join the Community</h2>
-            <p>Connect with fellow runners, share mission logs, give feedback, and participate in community discussions on our <a href="https://discord.gg/2rZF5uuzc" style="color: var(--neon-blue); text-decoration: none; font-weight: bold;" target="_blank">Discord Server</a>.</p>
+            <p>Connect with fellow runners, share mission logs, give feedback, and participate in community discussions on our <a href="https://discord.gg/2rZF5uuzc" style="color: var(--neon-blue); text-decoration: none; font-weight: bold;" target="_blank">Discord Server</a> and <a href="https://www.facebook.com/groups/1589891669272849" style="color: var(--neon-pink); font-weight: bold;" target="_blank">Facebook Communities</a> (<a href="https://www.facebook.com/groups/1589891669272849" style="color: var(--neon-blue);" target="_blank">Facebook Group 1</a> | <a href="https://www.facebook.com/groups/1481032013145921/" style="color: var(--neon-blue);" target="_blank">Facebook Group 2</a>).</p>
             <p style="margin-top: 20px;">For support, contact us at <a href="mailto:support@neural-link.net" style="color: var(--neon-pink);">support@neural-link.net</a> | <a href="handbook.html" style="color: var(--neon-blue);">Player Handbook</a> | <a href="privacy.html" style="color: var(--neon-blue);">Privacy Policy</a></p>
         </section>
     </div>
 
     <footer>
-        &copy; 2026 CYTORY NEURAL SYSTEMS. ALL RIGHTS RESERVED. // DATA_ENCRYPTED_AES256
+        &copy; 2026 CYTORY NEURAL SYSTEMS. ALL RIGHTS RESERVED. // <a href="privacy.html">Privacy Policy</a> // SYSTEM VERSION 1.24 (BUILD 24) // LAST UPDATED: MAY 2026
     </footer>
 
 </body>

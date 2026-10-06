@@ -3,55 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Cytory</title>
+    <title>Cytory | Privacy Policy & Data Protection Protocol</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <!-- Open Graph & Social Media Previews -->
+    <meta property="og:title" content="Cytory | Privacy Policy & Data Protection Protocol">
+    <meta property="og:description" content="Official Cytory Privacy Policy and Data Protection Protocol. Local data sovereignty, Google Sign-In, and cloud sync security details.">
+    <meta property="og:image" content="https://cytorygame.github.io/icon.png">
+    <meta property="og:url" content="https://cytorygame.github.io/privacy.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cytory | Privacy Policy V1.24">
+    <meta name="twitter:description" content="Privacy policy and data protection protocol for Cytory Cyberpunk RPG.">
+    <meta name="twitter:image" content="https://cytorygame.github.io/icon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #333;
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-pink: #ff00ff;
+            --neon-amber: #fde68a;
+            --dark-bg: #050505;
+            --card-bg: rgba(20, 20, 25, 0.85);
+            --grid-color: rgba(0, 243, 255, 0.05);
         }
-        h1 { color: #000; border-bottom: 2px solid #333; padding-bottom: 10px; }
-        h2 { color: #444; margin-top: 30px; }
-        .back-link { display: block; margin-bottom: 20px; text-decoration: none; color: #0066cc; }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e5e7eb;
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                              linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+            background: rgba(5, 5, 5, 0.95);
+        }
+
+        .nav-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+        }
+
+        .nav-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-pink);
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 2px solid var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin: 0;
+            color: var(--neon-blue);
+            text-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            letter-spacing: 2px;
+            color: var(--neon-pink);
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .step-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-left: 4px solid var(--neon-blue);
+            padding: 30px;
+            margin-bottom: 35px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .step-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            color: var(--neon-pink);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-blue);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-amber);
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        li strong {
+            color: var(--neon-amber);
+        }
+
+        .highlight-box {
+            background: rgba(0, 243, 255, 0.05);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-left: 4px solid var(--neon-blue);
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 6px;
+        }
+
+        .highlight-box h3 {
+            color: var(--neon-blue);
+            margin-top: 0;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin: 50px 0 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            background: transparent;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .cta-button:hover {
+            background: var(--neon-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #777;
+            border-top: 1px solid #222;
+        }
+
+        a {
+            color: var(--neon-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--neon-pink);
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">&larr; Back to Main Frame</a>
-    <h1>Privacy Policy</h1>
-    <p>Last Updated: July 28, 2026</p>
 
-    <p>Cytory (the "App") is a product developed by Cytory. We respect your privacy and are committed to protecting it through our compliance with this policy.</p>
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="icon.png" alt="Cytory Icon"> CYTORY
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="handbook.html">Player Handbook</a>
+            <a href="privacy.html" style="color: var(--neon-blue); font-weight: bold;">Privacy Policy</a>
+            <a href="https://discord.gg/2rZF5uuzc" target="_blank">Discord</a>
+            <a href="https://www.facebook.com/groups/1589891669272849" target="_blank">Facebook</a>
+        </div>
+    </nav>
 
-    <h2>1. Data We Collect</h2>
-    <p><strong>Authentication:</strong> We use Google Sign-In to authenticate users. We collect your Google ID and email address to manage your account and "Neural Pulse" balance.</p>
-    <p><strong>Game Data:</strong> All game sessions, character statistics, and narrative logs are stored locally on your device or in your personal Google Drive (App Data folder). We do not store your campaign data on our servers.</p>
+    <header>
+        <h1>PRIVACY POLICY</h1>
+        <p class="subtitle">DATA PROTECTION & NEURAL PRIVACY PROTOCOL V1.24</p>
+    </header>
 
-    <h2>2. Use of Information</h2>
-    <p>We use your authentication data solely to:</p>
-    <ul>
-        <li>Provide access to your account across multiple devices.</li>
-        <li>Manage and protect your "Neural Pulse" (in-app currency) transactions.</li>
-        <li>Provide technical support and essential service updates.</li>
-    </ul>
+    <div class="container">
 
-    <h2>3. Third-Party Services</h2>
-    <p>The App integrates with the following third-party services:</p>
-    <ul>
-        <li><strong>Google Play Services:</strong> For authentication and in-app purchases.</li>
-        <li><strong>Google Drive API:</strong> To allow you to sync your game data to your own cloud storage. We only access the dedicated "App Data" folder and cannot see your other Google Drive files.</li>
-        <li><strong>OpenAI / Anthropic:</strong> To generate AI narrative. Your actions are sent to these providers anonymously; no personally identifiable information (PII) is included in AI requests.</li>
-    </ul>
+        <!-- SECTION 01: OVERVIEW -->
+        <div class="step-card">
+            <div class="step-number">SECTION 01</div>
+            <h2>Overview & Scope</h2>
+            <p>Cytory (the "App") is a product developed by Cytory LLC. We respect your privacy and are committed to protecting it through full compliance with this Data Protection & Privacy Protocol.</p>
+        </div>
 
-    <h2>4. Data Retention</h2>
-    <p>Account data (Google ID and pulse balance) is retained as long as your account is active. You may request account deletion at any time by contacting us.</p>
+        <!-- SECTION 02: DATA WE COLLECT -->
+        <div class="step-card">
+            <div class="step-number">SECTION 02</div>
+            <h2>Data We Collect</h2>
+            <ul>
+                <li><strong>Authentication:</strong> We use Google Sign-In to authenticate users. We collect your Google ID and email address solely to manage your account identity and "Neural Pulse" balance.</li>
+                <li><strong>Game Data & Local Sovereignty:</strong> All game sessions, character statistics, and narrative campaign logs are stored locally on your device or in your personal Google Drive (App Data folder). We do not store your campaign narrative data on our servers.</li>
+            </ul>
+        </div>
 
-    <h2>5. Security</h2>
-    <p>We implement industry-standard security measures, including cryptographically signed ID tokens for authentication, to protect your account and currency balance.</p>
+        <!-- SECTION 03: USE OF INFORMATION -->
+        <div class="step-card">
+            <div class="step-number">SECTION 03</div>
+            <h2>Use of Information</h2>
+            <p>We use your authentication data strictly to:</p>
+            <ul>
+                <li>Provide seamless account access across multiple authorized devices.</li>
+                <li>Manage and protect your "Neural Pulse" (in-app currency) transactions.</li>
+                <li>Provide technical support, error resolution, and essential service updates.</li>
+            </ul>
+        </div>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions regarding this privacy policy, please contact us at support@neural-link.net.</p>
+        <!-- SECTION 04: THIRD-PARTY SERVICES -->
+        <div class="step-card">
+            <div class="step-number">SECTION 04</div>
+            <h2>Third-Party Integrations</h2>
+            <p>The App integrates with the following trusted third-party services:</p>
+            <ul>
+                <li><strong>Google Play Services:</strong> Used for secure user authentication and Google Play in-app purchases.</li>
+                <li><strong>Google Drive API:</strong> Allows you to sync game save snapshots to your own cloud storage. We only access the dedicated "App Data" folder and cannot access any other files in your Google Drive.</li>
+                <li><strong>OpenAI / Anthropic:</strong> Used to generate dynamic AI narrative content. Your gameplay actions are transmitted anonymously; no personally identifiable information (PII) is included in AI requests.</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 05: DATA RETENTION & SECURITY -->
+        <div class="step-card">
+            <div class="step-number">SECTION 05</div>
+            <h2>Data Retention & Security Protocol</h2>
+            <ul>
+                <li><strong>Data Retention:</strong> Account authentication data (Google ID and pulse balance) is retained only as long as your account is active. You may request account deletion at any time by contacting support.</li>
+                <li><strong>Security Standards:</strong> We implement industry-standard cryptographic measures, including cryptographically signed ID tokens for authentication, to protect your account and currency balance.</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 06: CONTACT & ENQUIRIES -->
+        <div class="highlight-box">
+            <h3>⚡ CONTACT & ENQUIRIES</h3>
+            <p>If you have any questions or enquiries regarding this privacy policy or account deletion requests, please contact us at <a href="mailto:support@neural-link.net">support@neural-link.net</a>.</p>
+        </div>
+
+        <div class="cta-container">
+            <a href="https://play.google.com/store/apps/details?id=com.cytory.cytorygame" class="cta-button" target="_blank" style="background: var(--neon-blue); color: var(--dark-bg); font-weight: bold;">▶ Download on Google Play</a>
+            <a href="index.html" class="cta-button">Main Frame</a>
+            <a href="handbook.html" class="cta-button">Player Handbook</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 CYTORY NEURAL SYSTEMS. ALL RIGHTS RESERVED. // <a href="privacy.html">Privacy Policy</a> // SYSTEM VERSION 1.24 (BUILD 24) // LAST UPDATED: MAY 2026
+    </footer>
+
 </body>
 </html>

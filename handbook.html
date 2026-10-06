@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cytory | Official Player Handbook & Cyberpunk Rulebook</title>
+    <title>Cytory | Official Player Handbook & Cyberpunk Rulebook V1.24</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <!-- Open Graph & Social Media Previews -->
+    <meta property="og:title" content="Cytory | Official Player Handbook & Rulebook V1.24">
+    <meta property="og:description" content="Complete starter manual, character archetypes, d20 combat math, narrative waves, and operational guide for Cytory Cyberpunk RPG.">
+    <meta property="og:image" content="https://cytorygame.github.io/icon.png">
+    <meta property="og:url" content="https://cytorygame.github.io/handbook.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cytory | Player Handbook V1.24">
+    <meta name="twitter:description" content="Complete starter manual & rules guide for Cytory Cyberpunk RPG.">
+    <meta name="twitter:image" content="https://cytorygame.github.io/icon.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -43,6 +60,15 @@
             text-decoration: none;
             font-weight: bold;
             letter-spacing: 3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
         }
 
         .nav-links a {
@@ -59,7 +85,7 @@
 
         header {
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 50px 20px 30px;
             border-bottom: 2px solid var(--neon-blue);
             box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
         }
@@ -81,9 +107,50 @@
             color: var(--neon-pink);
         }
 
+        /* Quick Jump Bar */
+        .toc-bar {
+            background: rgba(10, 10, 15, 0.95);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-bottom: 2px solid var(--neon-blue);
+            padding: 15px 20px;
+            margin: 20px auto 0;
+            max-width: 950px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            border-radius: 6px;
+        }
+
+        .toc-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-pink);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .toc-bar a {
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            background: rgba(0, 243, 255, 0.08);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+
+        .toc-bar a:hover {
+            background: var(--neon-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+
         .container {
             max-width: 950px;
-            margin: 40px auto;
+            margin: 30px auto 40px;
             padding: 0 20px;
         }
 
@@ -95,6 +162,7 @@
             margin-bottom: 35px;
             border-radius: 6px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            scroll-margin-top: 20px;
         }
 
         .step-number {
@@ -158,6 +226,7 @@
             padding: 25px;
             margin-top: 40px;
             border-radius: 6px;
+            scroll-margin-top: 20px;
         }
 
         .roadmap-box h3 {
@@ -172,6 +241,7 @@
             padding: 20px;
             margin-top: 30px;
             border-radius: 6px;
+            scroll-margin-top: 20px;
         }
 
         .warning-box h3 {
@@ -204,11 +274,15 @@
         .cta-container {
             text-align: center;
             margin: 60px 0;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 15px 40px;
+            padding: 15px 30px;
             border: 2px solid var(--neon-blue);
             color: var(--neon-blue);
             text-decoration: none;
@@ -230,36 +304,59 @@
             text-align: center;
             padding: 40px;
             font-size: 0.8rem;
-            color: #555;
+            color: #777;
             border-top: 1px solid #222;
         }
 
         a {
             color: var(--neon-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--neon-pink);
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html" class="nav-logo">CYTORY</a>
+        <a href="index.html" class="nav-logo">
+            <img src="icon.png" alt="Cytory Icon"> CYTORY
+        </a>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="handbook.html" style="color: var(--neon-blue); font-weight: bold;">Player Handbook</a>
             <a href="privacy.html">Privacy Policy</a>
             <a href="https://discord.gg/2rZF5uuzc" target="_blank">Discord</a>
+            <a href="https://www.facebook.com/groups/1589891669272849" target="_blank">Facebook</a>
         </div>
     </nav>
 
     <header>
         <h1>PLAYER HANDBOOK</h1>
-        <p class="subtitle">COMPLETE STARTER MANUAL & CYBERPUNK RULEBOOK V1.22</p>
+        <p class="subtitle">COMPLETE STARTER MANUAL & CYBERPUNK RULEBOOK V1.24</p>
     </header>
+
+    <!-- QUICK JUMP TABLE OF CONTENTS -->
+    <div class="toc-bar">
+        <span class="toc-title">⚡ QUICK JUMP:</span>
+        <a href="#sec-01">01. Classes</a>
+        <a href="#sec-02">02. Waves</a>
+        <a href="#sec-03">03. D20 Math</a>
+        <a href="#sec-04">04. Equipment</a>
+        <a href="#sec-05">05. Tuning</a>
+        <a href="#sec-06">06. HUD Guide</a>
+        <a href="#sec-07">07. Directives</a>
+        <a href="#sec-08">08. Saves</a>
+        <a href="#sec-roadmap">Roadmap</a>
+        <a href="#sec-troubleshooting">Troubleshooting</a>
+    </div>
 
     <div class="container">
 
         <!-- SECTION 1: ARCHETYPES & ORIGINS -->
-        <div class="step-card">
+        <div class="step-card" id="sec-01">
             <div class="step-number">SECTION 01</div>
             <h2>Origins & Archetypes (Class Specifications)</h2>
             <p>Every unit initialized in Cytory begins with a baseline Origin and Class Archetype that dictates stat scaling, abilities, and combat hit dice:</p>
@@ -331,7 +428,7 @@
         </div>
 
         <!-- SECTION 2: NARRATIVE WAVES & MISSION PACING -->
-        <div class="step-card">
+        <div class="step-card" id="sec-02">
             <div class="step-number">SECTION 02</div>
             <h2>Dynamic Narrative Waves & One-Shot Arc Pacing</h2>
             <p>Every story campaign in Cytory flows through structured, 75-turn <strong>One-Shot Narrative Waves</strong> governed by real-time neural pacing. Starting a new mission or concluding an old one resets the wave counter to <strong>Turn 1</strong> for that specific objective:</p>
@@ -403,7 +500,7 @@
         </div>
 
         <!-- SECTION 3: ATTRIBUTES & D20 MATH -->
-        <div class="step-card">
+        <div class="step-card" id="sec-03">
             <div class="step-number">SECTION 03</div>
             <h2>Core Attributes & D20 Roll Math</h2>
             <p>Every mechanical check in Cytory follows the classic D20 tabletop resolution formula:</p>
@@ -433,7 +530,7 @@
         </div>
 
         <!-- SECTION 4: FLESHSMITH & INVENTORY -->
-        <div class="step-card">
+        <div class="step-card" id="sec-04">
             <div class="step-number">SECTION 04</div>
             <h2>The Fleshsmith, Equipment & Vehicles</h2>
             <ul>
@@ -451,7 +548,7 @@
         </div>
 
         <!-- SECTION 5: PROGRESSION & NEURAL TUNING -->
-        <div class="step-card">
+        <div class="step-card" id="sec-05">
             <div class="step-number">SECTION 05</div>
             <h2>Neural Tuning & Interactive Character Sheets</h2>
             <ul>
@@ -467,7 +564,7 @@
         </div>
 
         <!-- SECTION 6: UI HUD & MENU DIRECTORY -->
-        <div class="step-card">
+        <div class="step-card" id="sec-06">
             <div class="step-number">SECTION 06</div>
             <h2>UI HUD & Menu Directory (Button-By-Button Guide)</h2>
             <ul>
@@ -495,7 +592,7 @@
         </div>
 
         <!-- SECTION 7: DAILY / WEEKLY DIRECTIVES MATRIX -->
-        <div class="step-card">
+        <div class="step-card" id="sec-07">
             <div class="step-number">SECTION 07</div>
             <h2>Daily, Weekly & Monthly Directives Matrix</h2>
             <p>Access the <strong>OPS</strong> tab daily to complete operational directives and claim high-value gameplay rewards:</p>
@@ -509,7 +606,7 @@
         </div>
 
         <!-- SECTION 8: SAVES & CLOUD SYNC -->
-        <div class="step-card">
+        <div class="step-card" id="sec-08">
             <div class="step-number">SECTION 08</div>
             <h2>Saves, Cold Storage & Google Docs Export</h2>
             <ul>
@@ -521,7 +618,7 @@
         </div>
 
         <!-- UPCOMING FEATURES / ROADMAP -->
-        <div class="roadmap-box">
+        <div class="roadmap-box" id="sec-roadmap">
             <h3>🔮 FUTURE TRANSMISSIONS: UPCOMING FEATURES & ROADMAP</h3>
             <ul>
                 <li><strong>Daily Operations [OPS]:</strong> Faction standing contracts, daily login streaks, and high-value bounty targets in the Sprawl.</li>
@@ -531,7 +628,7 @@
         </div>
 
         <!-- TROUBLESHOOTING / NEURAL DESYNC -->
-        <div class="warning-box">
+        <div class="warning-box" id="sec-troubleshooting">
             <h3>⚠️ KNOWN ISSUES & TROUBLESHOOTING: NEURAL DESYNC & OVERLOAD</h3>
             <ul>
                 <li><strong>Network & AI Model Saturation:</strong> Cytory relies on real-time neural LLM generation. During periods of high global traffic or temporary internet connection drops, you may encounter a <strong>NEURAL_DESYNC</strong> or <strong>NEURAL_OVERLOAD</strong> alert.</li>
@@ -556,13 +653,15 @@
         </div>
 
         <div class="cta-container">
+            <a href="https://play.google.com/store/apps/details?id=com.cytory.cytorygame" class="cta-button" target="_blank" style="background: var(--neon-blue); color: var(--dark-bg); font-weight: bold; border-color: var(--neon-blue);">▶ Download on Google Play</a>
             <a href="https://discord.gg/2rZF5uuzc" class="cta-button" target="_blank">Join Our Discord Community</a>
+            <a href="https://www.facebook.com/groups/1589891669272849" class="cta-button" target="_blank" style="border-color: #1877F2; color: #1877F2;">Facebook Group</a>
         </div>
 
     </div>
 
     <footer>
-        &copy; 2026 CYTORY NEURAL SYSTEMS. ALL RIGHTS RESERVED. // <a href="privacy.html">Privacy Policy</a>
+        &copy; 2026 CYTORY NEURAL SYSTEMS. ALL RIGHTS RESERVED. // <a href="privacy.html">Privacy Policy</a> // SYSTEM VERSION 1.24 (BUILD 24) // LAST UPDATED: MAY 2026
     </footer>
 
 </body>
